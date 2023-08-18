@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="get">get</button>
+    <button class="post">post</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="./index.js"></script>
+<script>
+    var get=document.querySelector('.get');
+    var post=document.querySelector('.post');
+    get.addEventListener('click',function(){
+        $.get({
+            url:'http://localhost:3000?name=shiya',
+            success:function(data){
+            console.log(data);
+        }});
+    });
+
+
+        
+</script>
+</html>
